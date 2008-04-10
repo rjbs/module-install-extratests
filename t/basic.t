@@ -1,8 +1,8 @@
 use strict;
 use warnings;
 
-use Test::More tests => 1;
+use Test::More tests => 2;
 
-diag "release testing: " . ($ENV{RELEASE_TESTING} ? 1 : 0);
-ok(1);
+require_ok('Module::Install::ExtraTests');
+ok("Well... things compiled, anyway.");
 
