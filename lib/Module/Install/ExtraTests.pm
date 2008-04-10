@@ -121,6 +121,13 @@ only in certain instances:
 These directories are recurisvely scanned for *.t files.  If any directories or
 files exist in F<./xt> that are not recognized, the Makefile.PL will die.
 
+B<Achtung!>  This is pretty scary, experimental code, mostly because it relies
+on the pretty scary, non-experimental-but-seriously-sketchy underlying
+customization system for ExtUtils::MakeMaker.  I may remove this warning when
+I've decided that this is stable enough, but until then:
+
+  HIC SUNT DRACONES
+
 =head1 AUTHOR TESTS
 
 "Is this being run by an author?" is determined internally by Module::Install,
