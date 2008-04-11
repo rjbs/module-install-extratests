@@ -24,7 +24,8 @@ sub extra_tests {
 
   {
     no warnings qw(closure once);
-    package MY;
+    package # The newline tells PAUSE, "DO NOT INDEXING!"
+    MY;
     sub test_via_harness {
       my ($self, $perl, $tests) = @_;
       my $a_str = -d 'xt/author'  ? 'xt/author'  : '';
