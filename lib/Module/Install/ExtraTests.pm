@@ -5,7 +5,7 @@ package Module::Install::ExtraTests;
 use Module::Install::Base;
 
 BEGIN {
-  our $VERSION = '0.001';
+  our $VERSION = '0.002';
   our $ISCORE  = 1;
   our @ISA     = qw{Module::Install::Base};
 }
@@ -32,7 +32,7 @@ sub extra_tests {
       my $s_str = -d 'xt/smoke'   ? 'xt/smoke'   : '';
       my $is_author = $Module::Install::AUTHOR ? 1 : 0;
 
-      return qq{\t$perl "-Minc::Module::Install::ExtraTests" }
+      return qq{\t$perl "-Iinc" "-MModule::Install::ExtraTests" }
            . qq{"-e" "Module::Install::ExtraTests::__harness('Test::Harness', $is_author, '$a_str', '$r_str', '$s_str', \$(TEST_VERBOSE), '\$(INST_LIB)', '\$(INST_ARCH LIB)')" $tests\n};
     }
 
