@@ -1,5 +1,9 @@
 Revision history for Module-Install-ExtraTests
 
+0.003     2008-04-13
+          remove space accidentally inserted into variable name
+            (thanks, Taro Nishino!)
+
 0.002     2008-04-11
           fix the way the custom harness is located so it works for users
           without Module::Install installed; thanks to smoke test report from

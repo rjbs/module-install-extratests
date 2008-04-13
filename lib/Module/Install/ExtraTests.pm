@@ -5,7 +5,7 @@ package Module::Install::ExtraTests;
 use Module::Install::Base;
 
 BEGIN {
-  our $VERSION = '0.002';
+  our $VERSION = '0.003';
   our $ISCORE  = 1;
   our @ISA     = qw{Module::Install::Base};
 }
