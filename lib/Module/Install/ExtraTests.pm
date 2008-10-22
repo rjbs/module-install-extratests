@@ -5,7 +5,7 @@ package Module::Install::ExtraTests;
 use Module::Install::Base;
 
 BEGIN {
-  our $VERSION = '0.003';
+  our $VERSION = '0.004';
   our $ISCORE  = 1;
   our @ISA     = qw{Module::Install::Base};
 }
@@ -13,7 +13,7 @@ BEGIN {
 sub extra_tests {
   my ($self) = @_;
 
-  die "extra_tests requested, but no ./xt exists\n" unless -d 'xt';
+  return unless -d 'xt';
   return unless my @content = grep { $_ =~ /^[.]/ } <xt/*>;
 
   die "unknown files found in ./xt" if grep { -f } @content;

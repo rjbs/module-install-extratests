@@ -1,5 +1,8 @@
 Revision history for Module-Install-ExtraTests
 
+0.004     2008-10-22
+          stop dying when ./xt doesn't exist (requested by FLORA)
+
 0.003     2008-04-13
           remove space accidentally inserted into variable name
             (thanks, Taro Nishino!)
