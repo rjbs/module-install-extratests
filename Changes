@@ -1,5 +1,8 @@
 Revision history for Module-Install-ExtraTests
 
+0.005     2008-12-02
+          enable AUTHOR_TESTING env var (patch by FLORA)
+
 0.004     2008-10-22
           stop dying when ./xt doesn't exist (requested by FLORA)
 
