@@ -1,5 +1,8 @@
 Revision history for Module-Install-ExtraTests
 
+0.006     2008-12-11
+          fix 0.005's change for Win32 (patch by FLORA, report by Taro Nishino)
+
 0.005     2008-12-02
           enable AUTHOR_TESTING env var (patch by FLORA)
 
