@@ -34,7 +34,7 @@ sub extra_tests {
       my $is_author = $Module::Install::AUTHOR ? 1 : 0;
 
       return qq{\t$perl "-Iinc" "-MModule::Install::ExtraTests" }
-           . qq["-e" "Module::Install::ExtraTests::__harness('Test::Harness', (exists \\\$\$ENV{AUTHOR_TESTING} ? \\\$\$ENV{AUTHOR_TESTING} : $is_author), '$a_str', '$r_str', '$s_str', \$(TEST_VERBOSE), '\$(INST_LIB)', '\$(INST_ARCHLIB)')" $tests\n];
+           . qq{"-e" "Module::Install::ExtraTests::__harness('Test::Harness', $is_author, '$a_str', '$r_str', '$s_str', \$(TEST_VERBOSE), '\$(INST_LIB)', '\$(INST_ARCHLIB)')" $tests\n};
     }
 
     sub dist_test {
@@ -65,7 +65,7 @@ sub __harness {
   # out on the command line can blow over its exec limit.
   require ExtUtils::Command;
   push @ARGV, __PACKAGE__->_deep_t($author_tests)
-    if $author_tests and $is_author;
+    if $author_tests and (exists $ENV{AUTHOR_TESTING} ? $ENV{AUTHOR_TESTING} : $is_author);
 
   push @ARGV, __PACKAGE__->_deep_t($release_tests)
     if $release_tests and $ENV{RELEASE_TESTING};
