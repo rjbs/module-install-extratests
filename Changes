@@ -1,5 +1,9 @@
 Revision history for Module-Install-ExtraTests
 
+0.007     2010-04-23
+          Only call the custom MakeMaker methods if the Makefile.PL actually
+          used (by FLORA)
+
 0.006     2008-12-11
           fix 0.005's change for Win32 (patch by FLORA, report by Taro Nishino)
 
