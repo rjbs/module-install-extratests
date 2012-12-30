@@ -1,3 +1,4 @@
+^Module-Install-ExtraTests-
 MANIFEST.SKIP
 ^\.git/
 .gitignore
