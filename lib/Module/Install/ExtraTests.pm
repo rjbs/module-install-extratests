@@ -5,7 +5,7 @@ package Module::Install::ExtraTests;
 use Module::Install::Base;
 
 BEGIN {
-  our $VERSION = '0.007';
+  our $VERSION = '0.008';
   our $ISCORE  = 1;
   our @ISA     = qw{Module::Install::Base};
 }
@@ -117,7 +117,7 @@ Module::Install::ExtraTests - contextual tests that the harness can ignore
 
 =head1 VERSION
 
-0.001
+0.008
 
 =head1 COMMANDS
 

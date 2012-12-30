@@ -1,5 +1,8 @@
 Revision history for Module-Install-ExtraTests
 
+0.008     2012-12-29
+          fix a documentation/code mismatch on VERSION (thanks, ETHER)
+
 0.007     2010-04-23
           Only call the custom MakeMaker methods if the Makefile.PL actually
           used (by FLORA)
